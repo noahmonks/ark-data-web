@@ -1,0 +1,27 @@
+{
+  "name": "PartnerLogo",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "customer",
+        "integration",
+        "partner"
+      ]
+    },
+    "order": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

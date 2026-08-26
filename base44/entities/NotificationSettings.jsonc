@@ -1,0 +1,41 @@
+{
+  "name": "NotificationSettings",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email address of the user"
+    },
+    "new_leads_enabled": {
+      "type": "boolean",
+      "default": true,
+      "description": "Include new lead creation in digest"
+    },
+    "conversion_updates_enabled": {
+      "type": "boolean",
+      "default": true,
+      "description": "Include conversion status updates in digest"
+    },
+    "low_score_alerts_enabled": {
+      "type": "boolean",
+      "default": true,
+      "description": "Include low conversion score alerts (below 30)"
+    },
+    "digest_frequency": {
+      "type": "string",
+      "enum": [
+        "daily"
+      ],
+      "default": "daily",
+      "description": "How often to receive digest emails"
+    },
+    "low_score_threshold": {
+      "type": "number",
+      "default": 30,
+      "description": "Conversion score threshold for alerts"
+    }
+  },
+  "required": [
+    "user_email"
+  ]
+}

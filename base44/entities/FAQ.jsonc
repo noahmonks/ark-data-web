@@ -1,0 +1,25 @@
+{
+  "name": "FAQ",
+  "type": "object",
+  "properties": {
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "string"
+    },
+    "page_scope": {
+      "type": "string",
+      "default": "home",
+      "description": "Which page this FAQ belongs to"
+    },
+    "order": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "question",
+    "answer"
+  ]
+}

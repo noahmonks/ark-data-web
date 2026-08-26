@@ -1,0 +1,62 @@
+{
+  "name": "LeadPrediction",
+  "type": "object",
+  "properties": {
+    "lead_id": {
+      "type": "string",
+      "description": "Reference to the Lead entity"
+    },
+    "conversion_likelihood": {
+      "type": "number",
+      "description": "Predicted conversion probability (0-100)"
+    },
+    "conversion_confidence": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ],
+      "description": "Confidence level of the prediction"
+    },
+    "upsell_opportunity": {
+      "type": "boolean",
+      "description": "Whether this lead has upsell potential"
+    },
+    "upsell_score": {
+      "type": "number",
+      "description": "Upsell potential score (0-100)"
+    },
+    "recommended_product": {
+      "type": "string",
+      "description": "Recommended product/tier for upsell"
+    },
+    "conversion_days_estimate": {
+      "type": "number",
+      "description": "Estimated days until conversion"
+    },
+    "risk_factors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Factors that may negatively impact conversion"
+    },
+    "opportunity_factors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Positive factors indicating conversion potential"
+    },
+    "prediction_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date prediction was generated"
+    }
+  },
+  "required": [
+    "lead_id",
+    "conversion_likelihood"
+  ]
+}

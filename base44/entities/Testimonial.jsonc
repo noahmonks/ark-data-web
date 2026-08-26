@@ -1,0 +1,32 @@
+{
+  "name": "Testimonial",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "quote": {
+      "type": "string"
+    },
+    "logo_url": {
+      "type": "string"
+    },
+    "avatar_url": {
+      "type": "string"
+    },
+    "order": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "name",
+    "quote"
+  ]
+}

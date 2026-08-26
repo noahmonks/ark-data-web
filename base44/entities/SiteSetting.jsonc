@@ -1,0 +1,30 @@
+{
+  "name": "SiteSetting",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string",
+      "description": "Setting key"
+    },
+    "value": {
+      "type": "string",
+      "description": "JSON string value"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "seo",
+        "tracking",
+        "theme",
+        "navigation",
+        "footer",
+        "integrations",
+        "general"
+      ]
+    }
+  },
+  "required": [
+    "key",
+    "value"
+  ]
+}

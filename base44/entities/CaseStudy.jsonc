@@ -1,0 +1,71 @@
+{
+  "name": "CaseStudy",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "industry": {
+      "type": "string"
+    },
+    "logo_url": {
+      "type": "string"
+    },
+    "hero_image_url": {
+      "type": "string"
+    },
+    "problem": {
+      "type": "string"
+    },
+    "approach": {
+      "type": "string"
+    },
+    "outcomes": {
+      "type": "string"
+    },
+    "metrics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "value": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "integrations_used": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "quote": {
+      "type": "string"
+    },
+    "quote_author": {
+      "type": "string"
+    },
+    "published": {
+      "type": "boolean",
+      "default": false
+    },
+    "order": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "title",
+    "company"
+  ]
+}

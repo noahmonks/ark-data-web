@@ -1,0 +1,103 @@
+{
+  "name": "Lead",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Full name"
+    },
+    "email": {
+      "type": "string",
+      "description": "Email address"
+    },
+    "company": {
+      "type": "string",
+      "description": "Company name"
+    },
+    "website": {
+      "type": "string",
+      "description": "Company website"
+    },
+    "role": {
+      "type": "string",
+      "description": "Job role/title"
+    },
+    "message": {
+      "type": "string",
+      "description": "Message or notes"
+    },
+    "source_page": {
+      "type": "string",
+      "description": "Page where lead was captured"
+    },
+    "utm_source": {
+      "type": "string"
+    },
+    "utm_medium": {
+      "type": "string"
+    },
+    "utm_campaign": {
+      "type": "string"
+    },
+    "utm_content": {
+      "type": "string"
+    },
+    "utm_term": {
+      "type": "string"
+    },
+    "referrer": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "contacted",
+        "qualified",
+        "converted",
+        "lost"
+      ],
+      "default": "new"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Internal notes"
+    },
+    "integration_status": {
+      "type": "object",
+      "properties": {
+        "ghl": {
+          "type": "string",
+          "enum": [
+            "pending",
+            "success",
+            "failed",
+            "disabled"
+          ]
+        },
+        "klaviyo": {
+          "type": "string",
+          "enum": [
+            "pending",
+            "success",
+            "failed",
+            "disabled"
+          ]
+        },
+        "salesforce": {
+          "type": "string",
+          "enum": [
+            "pending",
+            "success",
+            "failed",
+            "disabled"
+          ]
+        }
+      }
+    }
+  },
+  "required": [
+    "name",
+    "email"
+  ]
+}

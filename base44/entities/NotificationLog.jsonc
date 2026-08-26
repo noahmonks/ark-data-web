@@ -1,0 +1,51 @@
+{
+  "name": "NotificationLog",
+  "type": "object",
+  "properties": {
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "new_lead",
+        "conversion_update",
+        "low_score_alert"
+      ],
+      "description": "Type of event that triggered notification"
+    },
+    "lead_id": {
+      "type": "string",
+      "description": "Reference to the Lead entity"
+    },
+    "lead_name": {
+      "type": "string",
+      "description": "Name of the lead"
+    },
+    "lead_email": {
+      "type": "string",
+      "description": "Email of the lead"
+    },
+    "conversion_score": {
+      "type": "number",
+      "description": "Conversion likelihood score"
+    },
+    "status": {
+      "type": "string",
+      "description": "Lead status (new, contacted, qualified, converted, lost)"
+    },
+    "digest_sent_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when digest was sent"
+    },
+    "digest_sent_to": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of admin emails that received the digest"
+    }
+  },
+  "required": [
+    "event_type",
+    "lead_id"
+  ]
+}
